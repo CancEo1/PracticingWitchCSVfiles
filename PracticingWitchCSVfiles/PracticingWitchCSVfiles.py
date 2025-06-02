@@ -9,3 +9,10 @@ import csv
 with open("movies.csv", "w", newline="") as file:
     writer = csv.writer(file)
     writer.writerows(movies)
+
+# How to read the CSV file instead of finding the project folder
+# This essentially brings the CSV file to the Python IDE
+with open("movies.csv", "r", newline="") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(f"{row[0]} ({row[1]}) - Genre: {row[2]}, Rating: {row[3]}")
