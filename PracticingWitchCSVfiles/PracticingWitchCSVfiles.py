@@ -16,3 +16,9 @@ with open("movies.csv", "r", newline="") as file:
     reader = csv.reader(file)
     for row in reader:
         print(f"{row[0]} ({row[1]}) - Genre: {row[2]}, Rating: {row[3]}")
+
+# Optional ways to change the CSV format
+# changes the dilimiter for the writer object
+# writer = csv.writer(file, delimiter="\t)
+# changes for the reader object
+# reader = csv.reader(file, delimiter="\t")
